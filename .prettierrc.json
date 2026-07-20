@@ -1,0 +1,6 @@
+{
+  "proseWrap": "preserve",
+  "semi": true,
+  "tabWidth": 2,
+  "trailingComma": "all"
+}

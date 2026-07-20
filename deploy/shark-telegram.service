@@ -1,0 +1,39 @@
+[Unit]
+Description=Shark Telegram Trading Manager
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=sharkbot
+Group=sharkbot
+WorkingDirectory=/opt/sharkbot/current
+EnvironmentFile=/etc/sharkbot/runtime.env
+ExecStart=/usr/bin/node /opt/sharkbot/current/dist/main.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+UMask=0077
+
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectControlGroups=true
+ProtectClock=true
+ProtectHostname=true
+RestrictSUIDSGID=true
+RestrictRealtime=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallErrorNumber=EPERM
+
+[Install]
+WantedBy=multi-user.target

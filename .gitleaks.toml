@@ -1,0 +1,4 @@
+title = "Shark Telegram Trading Manager gitleaks policy"
+
+[extend]
+useDefault = true

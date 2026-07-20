@@ -1,0 +1,54 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.envrc
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.asc
+credentials*
+
+# Dependencies and generated build output
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+
+# Runtime and operator data
+data/
+logs/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+*.har
+*.pcap
+*.trace
+backups/
+tmp/
+
+# Cloud and infrastructure state
+.aws/
+.terraform/
+*.tfstate
+*.tfstate.*
+cdk.out/
+
+# Internal planning documents (kept locally, never published)
+SHARK_TELEGRAM_TRADING_BOT_PLAN.md
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+.codex/
+.agents/
+.opencode/
+*.swp
