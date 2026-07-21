@@ -40,10 +40,7 @@ export interface CancelCommand {
 }
 
 export type ParsedCommand =
-  | ReadCommand
-  | MutatingIntent
-  | EditCommand
-  | CancelCommand;
+  ReadCommand | MutatingIntent | EditCommand | CancelCommand;
 
 export class CommandParseError extends Error {
   public constructor(

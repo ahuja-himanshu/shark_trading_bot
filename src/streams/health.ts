@@ -1,10 +1,5 @@
 export type StreamState =
-  | "STOPPED"
-  | "CONNECTING"
-  | "HEALTHY"
-  | "STALE"
-  | "RECONNECTING"
-  | "DEGRADED";
+  "STOPPED" | "CONNECTING" | "HEALTHY" | "STALE" | "RECONNECTING" | "DEGRADED";
 
 export interface StreamHealth {
   state: StreamState;
