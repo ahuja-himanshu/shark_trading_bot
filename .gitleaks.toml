@@ -2,3 +2,14 @@ title = "Shark Telegram Trading Manager gitleaks policy"
 
 [extend]
 useDefault = true
+
+# Documented false positives only. Never allowlist a real credential.
+# These exact strings are fake fixtures used by tests/security.test.ts to
+# prove that credential-shaped values are redacted from logs and errors.
+[allowlist]
+description = "Fake redaction-test fixtures in tests/security.test.ts"
+regexTarget = "secret"
+regexes = [
+  '''abcDEF_12345678901234567890''',
+  '''123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi''',
+]
